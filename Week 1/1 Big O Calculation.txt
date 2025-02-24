@@ -1,0 +1,197 @@
+Week 1 : Big O Idea 
+
+What is Good Code?
+- code everyone can write it but the good code is faster and good solution !
+==> Developer : 
+
+1. Readable : Varable name , function name, write space or loop. becuae next time we will read and write 
+it again. in general we write good with the team, so we need to write code in standare so our team can under: 
+
+Ex: Developer most of the time : 90% read and 10% write. In general first if the as us to create new feature 
+we need to under stand the existing code first then we can under. so we can update later on. 
+
+ 
+2. Scalable : អាចពង្រីកបាន​ ( ចង់និយាយពីចំនួន Input ) 
+Ex. If we talk about the function : when we want to add new element what is the operation  
+
+if we have many data it will crush or it will take time! and user they dont' want take time 
+
+-----------------------------------------------------------------------------------------------------------
+
+*** Big O *** 
+
+Big O we take about the Element compare to Operation ! 
+
+Element ចំនួនធាតុ ( Input )
+Operation (ការ Excercute) 
+
+Example : 
+
+--------------------------------------
+
+public static void main(String[] args) {
+		String[] names = new String[] { "Nita", "Piseth", "Dara", "Thida", "Dara", "Vichect" };
+
+		findName(names);
+	}
+
+--------------------------------------
+
+1. Linear Big 0 (n) : 
+Depend on number of input : y = ax Linear 
+- it is command O(n) that we mostly meet in general 
+
+Ex: Big O : វាអាស្រ័យលើ ចំនួន input បើ input ច្រើន Operation វាក៏ច្រើនដែល 
+
+// Big O(n) - Linear
+	public static void findName(String[] names) {
+		for (int i = 0; i < names.length; i++) {
+			if (names[i] == "Piseth") {
+				System.out.println("Found Piseth");
+			}
+		}
+	}
+
+
+
+2. Big O(1) : វាអត់ខ្វល់ ចំនួនធាតុប៉ុន្មានដល់ទេគឺ គឺវាធ្វើ Operation តែម្តង់គត់ (Constant) : y = a 
+
+Ex: Function 
+
+public static void printFirstName(String[] names) {
+		System.out.println("Print First Element = " + names[0]);
+	}
+
+
+Research : https://www.bigocheatsheet.com/
+ការមើលក្រាប់ 
+
+- Horrible : ចំនួនធាតុ Element ច្រើន វា Run Very Slow 
+
+Ex: Data Structure : Array : 
+- Access : o(1) មានន័យថាយើងទៅទីតាំងណាមួយ ល្អ 
+- Search : o(n) 
+
+------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
