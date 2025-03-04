@@ -1,0 +1,3 @@
+Week2 Pillar of Programming :
+
+- Delete element by index 
