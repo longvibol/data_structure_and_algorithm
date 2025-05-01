@@ -1,0 +1,11 @@
+- When should we use LinkedList? 
+
+1. You have many insertion and deletions (especially in the middle or beginning)
+2. Order matters យើងត្រូវការគិតពីលំដាប់
+3. You don't need fast random access (LinkedList is slower than ArrayList if you offen do .get(index)).
+
+- Real-World Scenarios for LikedList
+
+1. Undo / Redo Functionality
+- Apps like Microsoft word, photoshop, etc
+- Every action (typing,
