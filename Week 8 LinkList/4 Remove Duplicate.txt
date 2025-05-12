@@ -1,0 +1,27 @@
+4 Remove Duplicate (Sorted / Unordered) 
+
+- We skip the duplicate with the duplicate number 
+
+* Sorted List 
+
+10->20->20->40->50->null
+
+After remove duplicate 
+
+==> 10->20->40->50->null
+
+
+------------------------------------------------
+
+// 4 RemoveDuplicateSorted	
+	public void removeDuplicateSorted() {
+		Node current = head;
+		while(current !=null &current.next !=null) {
+			if(current.data == current.next.data) {
+				current.next=current.next.next; // skip Duplicate
+			} else {
+				current = current.next; // Move forward only if no duplicate
+			}
+		}
+	}
+

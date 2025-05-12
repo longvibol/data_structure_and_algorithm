@@ -1,0 +1,58 @@
+3. Find from last n number 
+
+We use Efficient approach: Two Pointer 
+- Move the first pointer n step ahead 
+- Then move both pointers(first and second . next) until first reach the end 
+- Second will be at the N-th node from end 
+
+Ex: 
+
+10->20->30->40->50->60->56->48->null
+
+-----------------------------------------------------------------
+
+public Node findNthNodeFromEnd(int n) {
+		
+		//check if the linklist have node or not 
+		if(head ==null) {
+			System.out.println("List is empty.");
+			return null;
+		}
+		
+		Node first = head;
+		Node second = head;
+		
+		
+		// Loop Moving the n node from input 
+		
+		for(int i=0;i<n;i++) {
+			if(first == null) {
+				
+				System.out.println("List has fewer than "+n + " node.");
+				return null;
+			}
+			first = first.next;
+		}
+		
+		// Move both pointer until first reach end 
+		
+		while (first !=null) {
+			first = first.next;
+			second = second.next;
+		}
+		System.out.println("The "+n +" th node from End is: "+second.data);
+		
+		return second;
+	}
+
+
+
+
+
+
+
+
+
+
+
+
