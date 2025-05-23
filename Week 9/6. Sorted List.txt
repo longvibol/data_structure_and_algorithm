@@ -1,0 +1,143 @@
+6. Sorted List 
+
+A: 10->20->30-40->null
+B: 15->25->35->null
+
+==> Merged 2 LinkedList from Sort List 
+10->15->20->25->30->35->40->null
+
+
+===============================================================================
+
+public static Node mergeSortList(Node head1, Node head2) {
+		Node dummy = new Node(0); // we initial the 0 to make the value easy to simplify
+		Node tail = dummy;
+
+		while (head1 != null && head2 != null) {
+			if (head1.data <= head2.data) {
+				tail.next = head1;
+				head1 = head1.next;
+			} else {
+				tail.next = head2;
+				head2 = head2.next;
+			}
+			tail = tail.next;
+		}
+
+		// Append remaining node
+		if (head1 != null) {
+			tail.next = head1;
+		}
+		if (head2 != null) {
+			tail.next = head2;
+		}
+
+		return dummy.next;
+
+	}
+
+
+================================================================================
+
+package com.vibol;
+
+public class LinkListApp2 {
+
+	public static void main(String[] args) {
+
+		LinkListDemo list1 = new LinkListDemo();
+		list1.append(20);
+		list1.append(30);
+		list1.append(40);
+		
+		LinkListDemo list2 = new LinkListDemo();
+		
+		list2.append(10);		
+		list2.append(15);
+		list2.append(22);
+		
+		
+//		Node mergedList = LinkListDemo2.mergeTwoLinkList(list1.head, list2.head);
+		Node mergedList = LinkListDemo2.mergeSortList(list1.head, list2.head);		
+		LinkListDemo2.printList2(mergedList);
+		
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
