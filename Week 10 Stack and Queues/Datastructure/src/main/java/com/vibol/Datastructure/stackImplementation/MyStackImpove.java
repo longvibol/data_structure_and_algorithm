@@ -2,14 +2,14 @@ package com.vibol.Datastructure.stackImplementation;
 
 import java.util.Arrays;
 
-public class MyStack {
+public class MyStackImpove {
 
 	private int[] array;
 	private int top;
 	private int capacity;
 
 	// Initial value to the implement
-	public MyStack(int size) {
+	public MyStackImpove(int size) {
 		// first we need to set the size of our Array
 		array = new int[size];
 		this.capacity = size;
@@ -26,8 +26,8 @@ public class MyStack {
 		}
 
 		// first we assign the first index = 0 to the Array by add + 1
-		top = top + 1;
-		array[top] = item;
+
+		array[++top] = item;
 	}
 
 	// Method Peek (return the value but remove item)
@@ -46,10 +46,7 @@ public class MyStack {
 		if (top == -1) {
 			throw new RuntimeException("Stack is lunderFlow");
 		}
-		
-		int result = array[top];
-		top = top -1;
-		return result;
+		return array[top--];
 	}
 
 }
