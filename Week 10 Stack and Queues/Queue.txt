@@ -1,0 +1,87 @@
+- Queue is a linear data structure that follows First-In, First Out (FIFO).
+
+The first item added is the first one to be removed. 
+
+Ex: Line at a ticket counter : យើងឈរទិញសំបុត្រមុនត្រូបានមុនគេ
+
+- Concept Diagram 
+
+(មុខ)​ Front ->[10] [20] [30] <- Rear (ក្រោយ)
+
+enqueue(40) -> 40 will goes at the rear (យើងដាក់ធាតុចូលវានៅទៅក្រោយគេ)
+dequeue() -> remove 10 យើងដក់ធាតុចេញវានឹងធ្វើការដក់អានៅមុនគេវិញ
+
+- Common Queue Operation 
++ offer() : add element to the end 
++ pull() : Remove and return front element 
++ peek() : Return the top element without removing it 
++ isEmpty() : check if stack is empty 
+
+* Real-World Use Cased * 
+
++ Print Queue : document print in the order they were sent
++ Task Scheduling : OS schedules task or threads using queues. 
++ Customer Service system : Calls or chats are served in order. 
++ Streaming Data : Event/message streams (like Kafka) often follow FIFO order. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
