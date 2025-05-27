@@ -1,0 +1,100 @@
+Given a huge text file which contain these data: (id:value)
+
+id001;56
+id002;26
+id003;53
+id004;23
+id005;45
+id006;11
+
+--------
+
+Find top 3 ids which has largest value 
+Example with above data:
+==> id001,id003,id005
+
+
+-------------------------------------------------------------------
+
+If we use : 
+
+List<String> list = new ArrayList<>();	
+
+When the file is too big the system will be crush 
+
+Example : [id001;56, id002;26, id003;53, id004;23, id005;45, id006;11] this is output but if it get bigger it will slow 
+
+===> Best Solution we need to chose the good data structure: <===
+
+Queue : FiFO : ទិញសំបុត្រកុន ណាគេមកមុនបាន​មុន នាក់មកក្រោយត្រូវតម្រង់ជួរនៅខាងក្រោយ
+priorityQueue : Min-Heap ( វាដាក់ចូលហើយ តម្រៀបទទៀត)
+
+Example : 
+
+25
+34
+24
+45
+65
+12
+32
+
+
+When we use PriorityQueues : 
+Min-Head 3
+Collection Size: 3 វាយកបីធាតុមកធ្វើការដាក់ចូលសិន
+
+25,34,24 
+==> 24,25,34 
+45 (វាយក 45 នឹងទៅប្រៀបធៀបនឹងអាបីធាតុក្នុងនឹង) ចឹងលេខ 45 វាធំជាង 25 វាដាក់ 45 ចូល ហើយដក់លេខតូច 25 ចេញ
+==> 25,34,45
+65
+==> 34,45,65
+12
+==>34,45,65
+32
+==> 34,45,65
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
