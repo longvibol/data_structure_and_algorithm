@@ -1,0 +1,177 @@
+Hash Table: Algorithm 
+
+1. term they call difference from language :
+
+- Hash Map
+- Map
+- Unordered Map
+- Dictionary : payton 
+- Object 
+- Set : vir store only Value 
+
+2. Property in Hash Table 
+
+- Key : Similar to Index ( the same they us index but this key are input to Hash function then generate to index)
+it store in location Memory or index where to find the value in memory 
+
+Ex: Array : look up O(1) 
+Ex: Hash Map 
+Name : Dara ( Name = Key; Dara = Value) 
+Age : 23
+Grade : 12
+
+==> Process : Key -> Hash Function -> index 
+
+==================================================== 
+
+Explain on Hash Function:
+
+Link: https://www.miraclesalad.com/webtools/md5.php
+
+Ex : Input "Dara" => 3c20ade1447676f0d3667e668d92a695(index)- ទីតាំង Address របស់ Memory  
+ចឹងទោះយើងបញ្ចូល ប៉ុន្មានដង់ ក៏ដោយ វាមិនប្រែប្រួលដែល (idempotent) 
+
+* (idempotent) *
+
+- Link : Explain on Hash Table :
+
+https://en.wikipedia.org/wiki/Hash_table
+
+-- Sometime it have Collision (error from gender hash function) 
+-- Hash Collision : input the same value but generate the same index 
+
+=====================================================
+
+Hash Table Big O: 
+
+Insert 	O(1) : 
+Look Up O(1) : 
+Delete 	O(1) : 
+Search 	O(1) : 
+
+=====================================================
+
+In java the implemnetation of Hash table it "HashMap" and internal use "LinkList"
+
+==================================================
+
+Implement HashTable : in HashTable we need to Store: Entries "Key,Value" Opposite from Set: we store only "value" 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
