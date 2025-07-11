@@ -27,7 +27,7 @@ A special binary tree where :
 - Left subtree has values < node អាឆ្វេងតូចជាងអាស្តាំរហូត
 - Right subtree has values > node 
 
-3. Balanced Tree: គឺវារក្សា Hight from Room to left and right មិនអោយខុសគ្នាច្រើន ជាទូទៅវាធំជាង ១ ទេ
+3. Balanced Tree: គឺវារក្សា Hight from Root to left and right មិនអោយខុសគ្នាច្រើន ជាទូទៅវាធំជាង ១ ទេ
 
 This balancing helps to maintain O(log n) time complexity for searching, insertion, and deletion operations 
 

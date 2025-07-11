@@ -1,7 +1,5 @@
 package com.vibol.Datastructure.stackImplementation;
 
-import java.util.Arrays;
-
 public class MyStackImpove {
 
 	private int[] array;

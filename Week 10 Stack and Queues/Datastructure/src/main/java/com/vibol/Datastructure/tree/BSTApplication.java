@@ -22,7 +22,7 @@ public class BSTApplication {
 		System.out.println("Number search: " + searchNo + " " + search);
 		
 		
-		// called delete funciton 
+		// called delete function 
 		System.out.println("=================");
 		System.out.println("Delete 50");
 		tree.root = tree.delete(tree.root, 50);

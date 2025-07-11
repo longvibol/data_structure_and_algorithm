@@ -1,0 +1,61 @@
+** Leaf Node : ជា Node ដែលអត់មានកូន (No child) អាខាងចុងគេ ហៅថា Leaf 
+
+1. Method 
+
+// Sum in Rang 	
+	public int sumInRang(Node node, int l, int r) {
+		if(node == null) {
+			return 0;
+		}
+		if(node.data < l) {
+			return sumInRang(node.right, l, r);
+		}
+		if(node.data > r) {
+			return sumInRang(node.left, l, r);
+		}		
+		return node.data + sumInRang(node.left, l, r)+sumInRang(node.right, l, r);
+	}
+
+2. Run App :
+
+System.out.println("Sum all node in rang [30,70]: "+tree.sumInRang(tree.root,30,70));
+
+
+==> Result : Sum all node in rang [30,70]: 250
+
+Example : we want to sum from 30 to 70 
+
+/*
+		 {50,30,70,20,40,60,80}; 
+		    50
+		   /  \
+		 30    70
+		/ \    /\
+	      20  40  60 80 
+	 */
+
+Sum = 30 + 40 + 50 + 60 + 70 = 250 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

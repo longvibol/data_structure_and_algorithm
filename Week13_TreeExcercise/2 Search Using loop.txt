@@ -1,0 +1,33 @@
+In the BinarySearchTreeLoop :
+
+1.1 Create Method : Search 
+
+//Search 	
+	public boolean search(int target) {
+		 Node current = root;
+		 while(current != null) {
+			 if(target == current.data) {
+				 return true;
+			 }else if(target < current.data) {
+				 current = current.left;
+			 }else {
+				 current = current.right;
+			 }
+		 }
+		
+		return false; // No Found Target
+	}
+
+1.2 Run App
+
+
+		System.out.println();
+		System.out.println("Find Target: 50 = "+tree.search(50));
+		System.out.println("Find Target: 55 = "+tree.search(55));
+
+
+==> Result : 
+
+20 30 40 50 60 70 80 
+Find Target: 50 = true
+Find Target: 55 = false
