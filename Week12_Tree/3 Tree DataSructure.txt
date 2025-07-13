@@ -1,0 +1,88 @@
+what is Tree?
+
+- A tree is the hierarchical, non-linear data structure (s a type of data structure in which elements are not arranged sequentially or linearly) made up of nodes connected by edges. 
+It have one root node and no cycles (មានតែទៅអត់មានមកវិញទេ)​   
+
+- hierarchical ជារចនាសម្ពនពីលើចុះក្រោម (company chat board) 
+
+Tree Terminology 
+
+- node: basic unit of a tree ( each element) 
+- Root: អ្នកនៅលើគេ
+- Parent : a node that has children មានអ្នកខាងក្រោមវា
+- Child : a node derived from a parent 
+- leaf : a node with no children អ្នកអត់មានអីនៅពីក្រោម
+- Sibling :Node ដែលមាន Parent ដូចគ្នា
+- Subtree: Parent node + child node : A tree formed from a node and its descendants(អ្នកជំនានក្រោយ)​
+- Level : Distance from root (អ្នកនៅលើគេហៅថា level 0 -> level 1 …)
+- Depth : គិតចាប់ពី root ទៅ node ណាមួយ : Number of edges(ការតភ្ជាប់)​ Number of edges from root to the node 
+- Height : ចំងាយដែលធំបំផុតគិតចាប់តាំងពី Root to leaf : Max distance from a node to a leaf 
+
+1. Binary Tree : Each node at most 2 children: left and right 
+វាមានតែកូនពីរទេ ឆ្វេងស្តាំ 
+
+2. Binary Search Tree (BST) ម៉ាចំហៀងខាងឆ្វេង តូចជាងខាងស្តាំ 
+
+A special binary tree where : 
+- Left subtree has values < node អាឆ្វេងតូចជាងអាស្តាំរហូត
+- Right subtree has values > node 
+
+3. Balanced Tree: គឺវារក្សា Hight from Root to left and right មិនអោយខុសគ្នាច្រើន ជាទូទៅវាធំជាង ១ ទេ
+
+This balancing helps to maintain O(log n) time complexity for searching, insertion, and deletion operations 
+
+Two Common Types of Balanced Trees: 
+
+3.1. AVL Tree(Adelson-Velsky and Landis) : Strictly Balanced : រក្សាកំរិតលំអៀងគ្នាមិនអោយលើសពី  -1, 0 or 1.
+Ex: 10,20,30,40 ==> AVL វានឹងធ្វើការកំណត់ខ្លួនឯងអោយធ្វើមិចអាចអោយ អាចុងក្រោយខុសគ្នាតែមួយទេ 
+
+ 
+3.2. Red-Black Tree: Less strict, but guarantes logarithmic height by enforcing color rules តែវារក្សា Algorhgitm នឹងនៅតែល្អ O(log n)
+
+
+4. Full Binary Tree : every node has 0 or 2 children នៅ Node ខាងចុងគេគឺវា មានពីរធាតុ ឬក៏អត់តែម្តង់ 
+ 
+5. Complete Binary Tree: គ្រប់កំរិតទាំងអស់មិនមានចន្លោះទេ ក្នុងករណីចុងក្រោយគេអត់គិតទេអាខាងស្តំា
+អាខាងឆ្វេងត្រូវតែ បំពេញ 
+
+6. N-arry Tree គេឧសារប្រើ ដូចជា HTML , XML , file system, Organization charts 
+
+An N-ary tree is a general tree data structure where: 
+- Each node can have up to N children (វាអត់កំណត់ទេ សម្រាប់ node មួយវាអាចមានកូនច្រើន បាន​ ឬអោយតែមានកូនលើសពីរ ឡើងវាមិនមែនជា Binary នោះទេ
+
+- N is not fixed to 2 (like binary), it can be any number. 
+
+- if N = 2 -> it's a Binary Tree 
+- If N =3 -> each node can have at most 3 children and so on 
+
+Ex: file system នៅក្នុង Folder មួយយើងអាចមាន Foler ជាច្រើនទៀត
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

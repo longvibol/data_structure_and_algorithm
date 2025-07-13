@@ -1,0 +1,86 @@
+- Recursion : ពេលដែល function មួយ call ខ្លួនឯងមកប្រើដើម្បីដោះស្រាយបញ្ហាគេហៅថា Recursion function 
+- It have two key Characteristics 
+
+1. Base Case : when to stop recursion : ជាលក្ខខណ្ឌដែលវាត្រូវបញ្ចប់
+2. Recursive Case : the function calls itself to move toward the base case. វាជា function ដែលវាធ្វើការ called ខ្លួនឯងដើម្បីអាចអោយវាធ្វើការបញ្ចាប់នឹង
+
+Ex:
+
+Factorial of n (n!)
+5! = 5 x 4 x 3 x 2 x 1 
+Recursive version 
+
+
+------------------------------
+
+Ex Real World Analogy:
+
+- ពេលយើងលាងចាន់ យើងយកចាន់ ម្តង់មួយមកលាង (base Case)
+- យើងលាងចាន់ហើយ មួយ យើងដក់វាទុកម្តុំកុំអោយប្រលាក់ទៀត ធ្វើចឹងទាល់តែអស់ចាន់ 
+
+Command Mistake 
+- No base case -> infinite recursion -> StackOverFlowError 
+- Incorrect recursion step -> logic errors 
+
+----------------------------------------
+
+
+package com.vibol.Datastructure;
+
+public class Recursion {
+	public static void main(String[] args) {
+		int factoriy = factorial(5);
+		System.out.println(factoriy);
+	}
+	
+	public static int factorial(int n) {
+		int result =1;
+		/* option 1
+		for(int i =1;i<=n;i++) {
+			result = result*i;
+		
+		}
+		*/
+		
+		for(int i =n; i>=1; i--) {
+			result = result*i;		
+		}		
+		
+		return result;
+	}
+	
+	// Recursion
+	public static int fact(int n) {
+		if(n==1) {
+			return 1;
+		}
+		return n * fact(n-1);
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

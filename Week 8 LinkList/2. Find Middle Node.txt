@@ -1,0 +1,122 @@
+2. Find Middle Node 
+
+10->20->30->40->50
+
+==> middle node = 30
+
+10->20->30->40->50->60->56
+
+==> middle node = 40
+
+----------------------------------------------
+Best Approach : Two Pointer(Slow, Fast) 
+
+-slow : move 1 step at a time
+- fast : move 2 step at a time 
+
+*** 
+
+When fast reach the end, slow will be at the middle 
+
+-----------------------------
+
+Example : 10->20->30->40->50
+
+Head : 10
+current = head = 10
+Slow : Current.next = 20
+Fast : Current.next.next =30
+
+Slow : Current.next = 30
+Fast : Current.next.next = 50
+
+We can see the fast = 50 is the end of node so the slow is Middle 
+
+==> Middle = 50 
+ 
+============================================================================================
+
+// Find the middle node
+	
+	public Node findMiddle() {
+		if(head ==null) {
+			System.out.println("List is empty.");
+			return null;
+		}
+		
+		Node slow = head;
+		Node fast = head;
+		
+		while(fast !=null && fast.next !=null) {
+			slow = slow.next;
+			fast = fast.next.next;
+		}
+		System.out.println("Middle node value = "+slow.data);
+		
+		return slow;
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,90 @@
+Stack and Queues 
+
+1. Stack :
+
+Is a linear data structure ( អោយតាឃើញពាក្យ Linear មានន័យថា វាតាមលំដាប់លំដោយ ) that follows Last-In, First-Out(LIFO) principle. 
+
+អ្នកចូលក្រោយគេចេញ មុនគេ (The last item added is the first one to be removed) 
+
+Ex: Real-World Analogy 
+
+Think of a stack of plates: ការដាក់ចាន់លើគ្នា 
+- you add a plate on top យើងដាក់ចាន់គលើគ្នា
+- You remove the top plate first ពេលយើងយកចាន់និងមកប្រើគឺយើងយកចាន់ លើគេមកប្រើមុន តាមលំដាប់លំដោយ។ 
+ហើយអាចាន់ដាក់មុនគេ វានឹងទៅក្រោមគេ។​
+
++ Concept Diagram(LIFO)
+
+Top -> 30->20->10
+
+-If we push(ដាក់ចូល) (30) so it will go to the top and below have 20 and then lowest is 10
+-If we pop()(ដក់ចេញ) so it will remove the top one is 30 
+
+--------------------------------------------------------------------------------------------------------
+
+Common Stack Operation 
+
+- push()	: Add element to the top
+- pop()		: Remove and return the top element
+- peek()	: Return the top element without removing it 
+- isEmpty()	: check if stack it empty 
+
+Example: 
+
+public class StackDemo {
+
+	public static void main(String[] args) {
+
+		Stack<String> stack = new Stack<>();
+		
+		stack.push("Java");
+		stack.push("Spring");
+		stack.push("Kafka");
+		
+		System.out.println("Top: " +stack.peek());
+		System.out.println("Remove: " + stack.pop());
+		System.out.println("Now Top: "+ stack.peek());
+	}
+
+}
+
+--------------------------------------------------------------------
+
+Real-World Use Cases: 
+
+- Undo Feature : ពេលដែលយើងសរសេរហើយ យើង Redo វិញ គេប្រើ Stack នឹង
+- Call Stack : Function calls are pushed to a stack; when a function finishes, it is popped
+ពេលយើងសរសេរ Function អីមួយវា ដាក់ចូលក្នុង stack ដើម្បី ដំណើរការ ពេលវាចប់ហើយ វានឹង remove function នឹងចោរវិញ
+- Expression Evaluation: Useful for evaluating postfix expression or reversing operations. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,14 @@
+Tree 
+
+-O(Log n)
+-Recursive 
+
+-----------------------------
+
+- O(log n) < O(n) មានន័យថារយៈពេល របស់ O(log n) លឿនជាង O(n)
+- log n mean in algorithms : ក្នុងការស្វែងរកបើយើងចង់រកលេខ 16 យើងធ្វើការចែកវាជាពីរដើម្បីកាត់បន្ថយរយៈពេលនៃការស្វែងរកនឹង 
+
+Ex: Let's say n = 16 
+Then log2 16 = 4, because : 2^4 = 16
+This mean in a binary search over 16 items, it would take at most 4 steps to find the target 
+

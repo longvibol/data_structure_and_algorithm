@@ -1,0 +1,3 @@
+5. Remove duplicate with no order 
+
+We use Set សំណុំ មកជួយ​(ជាកន្លែងមួយដែលយើង រក្សាទុក store unite element) 

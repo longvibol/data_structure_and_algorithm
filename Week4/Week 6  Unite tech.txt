@@ -1,0 +1,16 @@
+Week 6 : Unite tech 
+
+There are two type of testing :
+
+1. Test Behavior : តេស្តវាត្រូវឆ្លងកាត់អីខ្លះ 
+2. Test Result 
+
+
+Homework:
+
+- complected test:
+- Exist key (containsKey) : បើយើងមាន Key iPhone ហើយចង់ដឹង Key នឹងមានអត់
+
+Good Code:
+1. Readable 
+2. Scalable 

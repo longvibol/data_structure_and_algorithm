@@ -1,0 +1,132 @@
+1. using recursive 
+
+// sum all node using recursive 	
+	public int sum(Node node) {
+		if(node == null) {
+			return 0;
+		}		
+		return node.data + sum(node.left) + sum(node.right);
+	}
+
+2. using iterative 
+
+// sum using loop 	
+	public int sumUsingLoop(Node root) {
+		if(root == null) {
+			return 0;
+		}
+		
+		// using stack : First In Last Out 
+		Stack<Node> stack = new Stack<>();
+		
+		// we push the root to the stack 		
+		stack.push(root);
+		int sum =0;
+		
+		while(!stack.empty()) {
+			
+			// we take the root to sum 
+			Node current = stack.pop();
+			sum+=current.data;
+			
+			// we take left or right to sum 
+			
+			if (current.right !=null) {
+				//we add the remaining at right to the stack 
+				stack.push(current.right);
+			}
+			if (current.left !=null) {
+				// we add the remaining at left to the stack 
+				stack.push(current.left);
+			}			
+		}		
+		return sum;
+	}
+
+3. Run App 
+
+	System.out.println();		
+	System.out.println("Sum all nodes = " + tree.sum(tree.root));
+	System.out.println("Sum all node using loop: = " + tree.sumUsingLoop(tree.root));
+
+
+==> Result 
+
+Sum all nodes = 350
+Sum all node using loop: = 350
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,154 @@
+1. using recursive 
+
+// sum leaves with recursive 	
+	public int sumOfLeaves(Node node) {
+		if(node == null) {
+			return 0;
+		}
+		if(node.left == null && node.right ==null) {
+			return node.data;
+		}
+		
+		return sumOfLeaves(node.left)+sumOfLeaves(node.right);
+	}
+
+2. using iterative (BFS, DFS) 
+
+// sum leave with iterative BFS (level checking)
+	public int sumUsingQueue(Node root) {
+		//check if the node is empty 
+		if(root == null) {
+			return 0;
+		}
+		
+		// Queue is Fist In Fist Out 
+		Queue<Node> queue = new LinkedList<>();
+		queue.add(root);
+		int sum =0;
+		
+		// queue have value 
+		while(!queue.isEmpty()) {
+			Node current = queue.poll();
+			System.out.println("==>Queue loop item: " + current.data);
+			// check and find leave the last value 
+			if(current.left == null && current.right ==null) {
+				sum +=current.data;
+			}
+			
+			// check what we need to add to the queue 
+			
+			if(current.left !=null) {
+				queue.add(current.left);
+			}
+			if(current.right != null) {
+				queue.add(current.right);
+			}
+		}		
+		return sum;
+	}
+	
+	// sum suing DFS
+	public int sumUsingStack(Node root) {
+		if(root == null) {
+			return 0;
+		}
+		
+		Stack<Node> stack = new Stack<>();
+		stack.push(root);
+		int sum =0;
+		
+		while(!stack.empty()) {
+			Node current = stack.pop();
+			System.out.println("==>Stack loop item: " + current.data);
+			//check if it is a leaf
+			if(current.left == null && current.right ==null) {
+				sum +=current.data;
+			}
+			if(current.right !=null) {
+				stack.push(current.right);
+			}
+			if(current.left !=null) {
+				stack.push(current.left);
+			}
+		}		
+		return sum;
+	}
+
+3. Run App 
+
+
+System.out.println("Sum all leaves: "+tree.sumOfLeaves(tree.root));
+System.out.println("Sum all leaves using iterative BFS: "+tree.sumUsingQueue(tree.root));
+System.out.println("Sum all leaves using iterative DFS: "+tree.sumUsingStack(tree.root));
+
+Example:
+
+		/*
+		 {50,30,70,20,40,60,80}; 
+		 	50
+		   /  \
+		 30    70
+		/ \    /\
+	  20  40  60 80 
+	sum Leave = 20 + 40 + 60 + 80 = 200
+		 * 
+		 */
+
+
+==> Result : 
+
+==>Queue loop item: 50
+==>Queue loop item: 30
+==>Queue loop item: 70
+==>Queue loop item: 20
+==>Queue loop item: 40
+==>Queue loop item: 60
+==>Queue loop item: 80
+Sum all leaves using iterative BFS: 200
+==>Stack loop item: 50
+==>Stack loop item: 30
+==>Stack loop item: 20
+==>Stack loop item: 40
+==>Stack loop item: 70
+==>Stack loop item: 60
+==>Stack loop item: 80
+Sum all leaves using iterative DFS: 200
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
