@@ -1,0 +1,10 @@
+Insertion Sort: Build the sorted list one item at a time.
+sample:[5,2,9,1,6]
+	0,1,2,3,4
+
+We start from the index = 1 then we compare 
+i=1 -> 2<5 => shift 5 to right, then insert 2 to index 0 => [2,5,9,1,6]
+i=2 -> 9>5 => no change 
+i=3 -> 1 compare with sort element 2,5,9 => 1 is the smallest => [1,2,5,9,6] 
+i=4 last element 6 compare with 9, 6<9 -> shift 9 to the right -> [1,2,5,6,9]
+

@@ -1,3 +1,0 @@
-We use command below to generate the data from Python
-
->> python TextGenerator.py
