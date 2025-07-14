@@ -1,0 +1,100 @@
+Quick Sort : Choose a pivot, partition the array, and sort the partition 
+
+sample: [5,2,9,1,6]
+
+- first find pivot = 6 (last element)
+
+យើងយក Pivot មកប្រៀបធៀបបើតូចជាងអោយវានៅ Partition ខាងឆ្វេង ហើយបើធំជាងអោយវានៅ Partition ខាងស្តាំ
+- Element < 6 : [5,2,1]
+- Element > 6 : [9]
+-> Rearrange : [5,2,1,6,9]
+
+==> Now apply quick sort recursively to [5,2,1] => 1 is the pivot with this partition 
+Sorted left: [1,2,5]
+
+==> Partition [6,9] ==> quicks sort recursively the same no change [6,9]
+
+Final result : [1,2,5,6,9] 
+
+-------------------------------
+
+Explain :
+
+[5,2,9,1,6]
+
+first Pivot = 6 
+We get : 5,2,1 (A) pi=3 (index 3 need to do the pivot and partition) : i
+We get : 9 (B) pi =4 (index 4 need to do the pivot and partition) : i+1
+
+==> [5,2,1,"6",9] : 
+
+(A) : pi = 2 (li = 0, hi = 2) Meet our condition then will find pivot and partition again 
+(B) : pi = 0 (li = 0, hi = 0) No need to do 
+
+=========================================Code 
+
+package com.vibol.Datastructure.sorting;
+
+import java.util.Arrays;
+
+public class QuickSort {
+
+	public static void main(String[] args) {
+		int[] arr = {5,2,9,1,6};
+		System.out.println(Arrays.toString(arr));
+		System.out.println("=====Quick Sort=====");
+		quickSort(arr,0,4);
+		System.out.println(Arrays.toString(arr));
+	}
+	
+	//First Step We need to find the partition first 
+	private static int partitionIndex(int[] arr, int low, int high) {
+		//find pivot 
+		int pivot = arr[high];
+		int i = low -1;
+		for(int j = low; j < high; j++) {	
+			// arr[low= = 5 and high = 6
+			if(arr[j]<pivot) {
+				//swap location the lower than pivot to the left 
+				i++; // to make index to 0 
+				int tmp = arr[i];
+				arr[i] = arr[j];
+				arr[j] = tmp;
+			}			
+		}
+		
+		// after finished first step we need to find the pivot continue : [5,2,1] => pivot 1
+		// we need to know the index low and high [5,2,1] => low = 0 ; high = 2
+		
+		int tmp = arr[i+1]; // start from index = 0
+		arr[i+1]= arr[high];
+		arr[high]= tmp;		
+		
+		return i+1;
+		
+	}	
+	
+	// low = index 0 ; high = last index 
+	public static void quickSort(int[] arr,int low, int high) {
+		// condition index low need to be smaller than high index 
+		if(low < high) {
+			int pi = partitionIndex(arr, low, high);
+			quickSort(arr,low,pi-1); //left 
+			quickSort(arr,pi+1,high); //right 
+		}
+		
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+

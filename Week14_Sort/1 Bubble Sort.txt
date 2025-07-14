@@ -1,0 +1,86 @@
+Data Sample:[5,2,9,1,6]
+
+*Bubble Sort
+*Selection Sort
+*Insertion Sort
+*Quick Sort
+*Merge Sort
+
+Bubble Sort: repeatedly swap adjacent elements if they are in the wrong order. 
+
+1. Bubble Sort 
+
+[5,2,9,1,6]
+
+Pass 1:
+
+-compare 2 and 5 - swap -> [2,5,9,1,6]
+-compare 5 and 9 - swap -> no swap 
+-compare 9 and 1 - swap -> [2,5,1,9,6]
+-compare 9 and 6 - swap -> [2,5,1,6,9]
+អស់ហើយសម្រាប់ធ្វើការប្រៀបធៀបដំបូង
+
+Pass 2:
+-compare 2 and 5 - swap -> no swap
+-compare 5 and 1 - swap -> [2,1,5,6,9]
+-compare 6 and 6 - swap -> no swap 
+
+Pass3:
+-compare 2 and 1 - swap -> [1,2,5,6,9]
+
+========================== Bubble Sort Code 
+
+package com.vibol.Datastructure.sorting;
+
+import java.util.Arrays;
+
+public class BublleSort {
+
+	public static void main(String[] args) {
+		int[] arr = {5,2,9,1,6};
+		System.out.println(Arrays.toString(arr));
+		System.out.println("=====Bubble Sort=====");
+		bubbleSort(arr);
+		System.out.println(Arrays.toString(arr));
+	}
+	
+	public static void bubbleSort(int[] arr) {
+		int n = arr.length;
+		for(int i=0;i<n;i++) {
+			for(int j=0;j<n;j++) {
+				if(arr[i]<arr[j]) {
+					int tmp = arr[i];
+					arr[i]=arr[j];
+					arr[j]=tmp;
+				}
+			}
+		}
+	}
+}
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
